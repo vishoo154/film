@@ -1,9 +1,16 @@
+
+
 body {
 	padding: 0;
 	margin: 0;
-	font-family:  'Work Sans', sans-serif;
-	color: black;
-	font-size: 16px;
+	font-family: Work Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: -0.05em;
+
+color: #FFFFFF;
 	height:100%;
 }
 
@@ -54,7 +61,7 @@ ul, li {
 width: 1000px;
 height: 2700px;
 margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 100px;
 background: #252525;
 
@@ -66,10 +73,11 @@ background: #252525;
 }
 
 .header{
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(37, 37, 37, 0.8);
+  position: fixed;
 }
 .logo1 {
-	margin-top: 9px;
+	margin-top: -15px;
 	margin-right: 19px;
 	margin-left: 10px;
 }
@@ -114,10 +122,8 @@ color: #FFFFFF;
 }
 
 .img {
-	width: 290px;
-height: 410px;
-
-
+    width: 250px;
+    height: 380px;
 }
 .film{
 	margin-left: 95px;
@@ -128,7 +134,7 @@ height: 410px;
 }
 
 .nav { 
-	  /* width: 1000px; */
+	  width: 1500px;
     margin: auto;
 }
 
@@ -151,7 +157,7 @@ height: 410px;
 	height: 51px;
 	left: 800px;
 	top: 30px;
-background: #F5612D;
+background: rgba(245, 97, 45, 0.75);
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
@@ -162,8 +168,8 @@ color: #FFFFFF;
 }
 
 .btn:hover {
-	background: #fff;
-    color:#4657C8;
+	background: #FABC3D;
+    color: #252525;
 }
 
 .btn1 { 
@@ -179,7 +185,7 @@ width: 185px;
 height: 51px;
 left: 945px;
 top: 30px;
-background: #252525;
+background: rgba(37, 37, 37, 0.75);
 border: 2px solid #000000;
 box-sizing: border-box;
 font-style: normal;
@@ -191,8 +197,8 @@ color: #FFFFFF;
 }
 
 .btn1:hover {
-	background: #fff;
-    color:#4657C8;
+	background: #FABC3D;
+    color: #252525;
 }
 
 .btn2 { 
@@ -219,13 +225,13 @@ color: #252525;
 }
 
 .btn2:hover {
-	background: #fff;
-    color:#4657C8;
+	background: #252525;
+    color: #FFFFFF;
 }
 
 .tp {
 	padding-bottom: 25px;
-	    padding-left: 95px
+	 padding-left: 395px;px
 }
 
 .description {
@@ -293,20 +299,20 @@ color: #F5612D;
 .menu1 {
        display: flex;
     margin-top: 135px;
-    margin-left: -954px;
+    margin-left: -914px;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .menu1 li { 
 	margin-right: 50px; /*поле справа*/
-	margin-top: 15px;
+	margin-top: 8px;
 }
 
 .menu1 li h1 {
 font-style: normal;
 font-weight: bold;
-font-size: 30px;
+font-size: 27px;
 line-height: 35px;
 letter-spacing: -0.07em;
 text-align: center;
@@ -316,7 +322,7 @@ color: #FFFFFF;
 .menu1 li p {
 font-style: normal;
 font-weight: normal;
-font-size: 20px;
+font-size: 18px;
 line-height: 23px;
 text-align: center;
 letter-spacing: -0.05em;
@@ -349,7 +355,300 @@ color: #FFFFFF;
 }
 
 
+  /* свойства модального окна по умолчанию */
+	.modal {
+      position: fixed;
+      /* фиксированное положение */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      /* цвет фона */
+      z-index: 1050;
+      opacity: 0;
+      /* по умолчанию модальное окно прозрачно */
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      /* анимация перехода */
+      pointer-events: none;
+      /* элемент невидим для событий мыши */
+ 	}
 
+.modal1 {
+      position: fixed;
+      /* фиксированное положение */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      /* цвет фона */
+      z-index: 1050;
+      opacity: 0;
+      /* по умолчанию модальное окно прозрачно */
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      /* анимация перехода */
+      pointer-events: none;
+      /* элемент невидим для событий мыши */
+  }
+
+
+    /* при отображении модального окно */
+    .modal:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    /* при отображении модального окно */
+    .modal1:target {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+
+    /* ширина модального окна и его отступы от экрана */
+    .modal-dialog {
+      position: relative;
+      width: auto;
+      margin: 350px;
+      margin-top: 30px;
+    }
+
+        .modal-dialog1 {
+      position: relative;
+      width: auto;
+      margin: 550px;
+      margin-top: 30px;
+    }
+
+
+    /* свойства для блока, содержащего контент модального окна */
+    .modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    /* background-color: #fff; */
+    /* -webkit-background-clip: padding-box; */
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    }
+
+    /* свойства для заголовка модального окна */
+    .modal-header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 15px;
+      background: #252525;
+    }
+
+    .modal-title {
+        /* margin-top: 0; */
+    /* margin-bottom: 0; */
+    margin: auto;
+    /* line-height: 1.5; */
+    /* font-size: 1.25rem; */
+    /* font-weight: 500; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #F5612D;
+
+    }
+
+    /* свойства для кнопки "Закрыть" */
+    .close {
+      float: right;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      opacity: .5;
+      text-decoration: none;
+    }
+
+    /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+    .close:focus,
+    .close:hover {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .75;
+    }
+
+    /* свойства для блока, содержащего основное содержимое окна */
+    .modal-body {
+      position: relative;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 40px;
+          padding-top: 0px;
+      overflow: auto;
+      background: #252525;
+    }
+
+
+
+
+    .form {
+  /* Расположим форму по центру страницы */
+  margin: 0 auto;
+  width: 400px;
+  /* Определим контур формы */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+	}
+
+/*.form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form li + li {
+  margin-top: 1em;
+} */
+
+.label {
+  /* Определим размер и выравнивание */
+  display: inline-block;
+    width: 190px;
+    /* text-align: right; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 23px;
+    letter-spacing: -0.06em;
+    color: #FFFFFF;
+    
+}
+
+ /*.input,
+ /*.textarea {
+
+  /* Определим размер полей */
+  /* width: 300px;
+  /* box-sizing: border-box;
+
+  /* Стилизуем границы полей */
+  /* border: 1px solid #999;
+ /*}
+
+ /*.input:focus,
+ /*.textarea:focus {
+  /* Дополнительная подсветка для элементов в фокусе */
+  /* border-color: #000;
+ /*}
+
+ /*.textarea {
+  /* Выравним многострочные текстовые поля с их текстами-подсказками */
+  /* vertical-align: top;
+
+  /* Предоставим пространство для ввода текста */
+  /* height: 5em;
+ /*}
+
+/* Full-width input fields */
+  .input[type=text], .input[type=password], .input[type=tel], .input[type=email] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 13px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.input[type=text]:focus, .input[type=password]:focus, .input[type=tel]:focus, .input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for all buttons */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 6px 13px;
+    background-color: #F5612D;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    float: left;
+    width: 50%;
+}
+
+.signupbtn {
+    padding: 6px 13px;
+   background: #252525;
+   border: 1.5px solid white;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    float: left;
+    width: 50%;
+}
+
+
+
+.clearfix {
+ margin-top: 10px;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 
@@ -389,9 +688,10 @@ color: #FFFFFF;
 }
 
 .tp {
-        
-    margin-right: 20%;
+  
+   padding-left: 275px;
 }
+
 .mid {
     /* margin-left: -30%; */
     margin: auto;
@@ -463,7 +763,10 @@ color: #FFFFFF;
 .logo1 {
     margin-top: -15px;
 }
-
+.tp {
+ 
+   padding-left: 135px;
+}
 }
 
 
@@ -526,13 +829,24 @@ color: #FFFFFF;
     font-size: 19px;
 }
 .mid {
-   
+   font-size: 15px;
     margin-left: 120px;
 }
 .logo1 {
     margin-top: -14px;
 }
-
+.modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      }
+      .modal-dialog {
+    max-width: 767px;
+    margin: 30px auto;
+  }
+  .tp {
+  
+   padding-left: 75px;
+}
 }
 
 
@@ -544,92 +858,102 @@ color: #FFFFFF;
 @media screen and (max-width: 575px) {
 
 	.container {
-		width: 320px;
+		width: 310px;
 		height: 3400px;
 		 margin-top: 30px;
 	}
-.logo {
+	.logo {
    width: 60px;
-}
-.viki p {
+	}
+	.viki p {
        font-size: 23px;
            width: 128px;
     line-height: 23px;
     align-items: center;
     display: flex;
-}
+	}
 
-.tp {
-    padding-bottom: 0px; 
-     padding-left: 0px; 
-         align-items: center;
+	.tp {
+       width: 250px;
+    /* min-height: 79px; */
+    padding-bottom: 0px;
+    padding-left: 0px;
     display: flex;
     flex-direction: column;
-}
-.menu1 li h1 {
+    align-items: flex-end;
+	}
+	.menu1 li h1 {
     font-size: 17px;
-}
-.menu1 li p {
+	}
+	.menu1 li p {
     font-size: 12px;
     line-height: 10px;
-}
-
-.btn2 {
+	}
+	.btn2 {
  
     padding-top: 0px;
     width: 104px;
     height: 30px;
     font-size: 19px;
     line-height: 30px;
-}
-.menu1 {
+	}
+	.menu1 {
         justify-content: flex-start;
             margin-top: -60px;
-}
-.description1, .description1 h1 {
+	}
+	.description1, .description1 h1 {
     width: 320px;
     /* height: 170px; */
      padding-top: 0px; 
-
-}
-.description1 h1 {
+	}
+	.description1 h1 {
     font-size: 20px;
-}
-.description1 p {
+	}
+	.description1 p {
     font-size: 12px;
-        margin-top: 0px;
-            line-height: 20px;
-}
-.film {
+    margin-top: 0px;
+    line-height: 20px;
+    max-width: 300px;
+	}
+	.film {
     margin-left: 0px; 
      margin-top: 0px; 
-}
-.img {
+	}
+	.img {
     width: 200px;
     height: 300px;
-}
-
-.btn {
+	}
+	.btn {
     margin-left: 10px;
     width: 55px;
     font-size: 16px;
          margin-top: 0px;
          height: 35px;
-}
-.btn1 {
+	}
+	.btn1 {
     margin-left: 0px;
     width: 120px;
     font-size: 16px;
     margin-top: 4px;
     height: 35px;
-}
-
-.footer {
+	}
+	.footer {
    
     height: 80px;
-}
-.logo1 {
+	}
+	.logo1 {
     margin-top: -9px;
     width: 60px;
+	}
+	.modal-dialog {
+    max-width: 500px;
+    margin: 30px auto;
+	}
+	.cancelbtn, .signupbtn 
+  { width: 100%;}
 }
-}
+
+
+
+
+  
